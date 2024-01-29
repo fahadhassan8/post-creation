@@ -1,0 +1,79 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>post-creation</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="input-wrapper">
+            <h2>create post</h2>
+            <div class="input">
+                <img src="image/img.jpg" alt="">
+                <input  id="input-modal" type="text" placeholder="What's on your mind?">
+            </div>
+            <hr style="margin-top: 15px;">
+            <div class="stickers">
+                <div class="box"><img src="image/smile.png" alt=""><p>Photo/Video</p></div>
+                <div class="box"><img src="image/tag.png" alt=""><p>Tag/Friends</p></div>
+                <div class="box"><img src="image/photo.png" alt=""><p>Feeling/Activity</p></div>
+                <div class="box smallBox">......</div>
+            </div>
+        </div>
+
+        <div class="modal-wrapper">
+            <div class="inner-wrapper">
+                <button class="c-button c-button--gooey" id="closeBtn"> Close
+                    <div class="c-button__blobs">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    </div>
+                </button>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+                    <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+                        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+                    </filter>
+                    </defs>
+                </svg>
+        
+                <div class="heading3"> <img src="image/img.jpg" alt=""><h3>Fahad Hassan</h3></div>
+                <textarea id="textArea" cols="20" rows="10" placeholder="What's on your mind?"></textarea>
+            
+                <div class="addPost">
+                    <h4>Add to your post</h4>
+                    <span>
+                        <img src="image/smile.png" alt="" class="img1">
+                        <img src="image/location.png" alt="" class="img2">
+                    </span>
+                </div>
+
+                <button onclick="submitPost();" class="c-button c-button--gooey" id="createPostButton"> Post
+                    <div class="c-button__blobs">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    </div>
+                </button>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+                    <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+                        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+                    </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+        <div class="post-area">   
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+    </html>
